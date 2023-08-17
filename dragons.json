@@ -1,0 +1,68 @@
+[
+  {
+    "colour": "black",
+    "element": "acid",
+    "alignment": "chaotic evil",
+    "str": 23,
+    "dex": 14,
+    "con": 21,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  {
+    "colour": "blue",
+    "element": "lightning",
+    "alignment": "lawful evil",
+    "str": 25,
+    "dex": 10,
+    "con": 23,
+    "int": 16,
+    "wis": 15,
+    "cha": 19
+  },
+  {
+    "colour": "brass",
+    "element": "fire",
+    "alignment": "chaotic good",
+    "str": 23,
+    "dex": 10,
+    "con": 21,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  {
+    "colour": "gold",
+    "element": "fire",
+    "alignment": "lawful good",
+    "str": 27,
+    "dex": 14,
+    "con": 25,
+    "int": 16,
+    "wis": 15,
+    "cha": 24
+  },
+  {
+    "colour": "green",
+    "element": "poison",
+    "alignment": "lawful evil",
+    "str": 23,
+    "dex": 12,
+    "con": 21,
+    "int": 18,
+    "wis": 15,
+    "cha": 17
+  },
+  {
+    "colour": "silver",
+    "element": "cold",
+    "alignment": "lawful good",
+    "str": 27,
+    "dex": 10,
+    "con": 25,
+    "int": 16,
+    "wis": 13,
+    "cha": 21
+  }
+]
