@@ -55,7 +55,7 @@ fetch("./dragons.json")
     document.body.innerHTML = htmlString;
   })
   .catch((error) => {
-    // If there are any errors while fetching the JSON, log them
+    // If there are any errors while fetching the JSON, log them and tell the user
     document.body.innerHTML =
       "There was an error loading the data. Please consult the console log.";
     console.log(error);
