@@ -25,12 +25,12 @@ function getModifier(score) {
 // If any of the above is confusing, please consult a nerd.
 
 // Fetch our file, and convert it into a JS JSON object
-await fetch("./dragons.json")
+fetch("./dragons.json")
   .then((response) => response.json())
   .then((data) => {
-    // Because the 'fetch' command is asynchronous, we handle the main logic once we have the response
-    // Start with just an 'unordered list' tag - we'll add list items as we iterate through the JSON
-    let htmlString = "<ul>";
+    // Because the 'fetch' command is asynchronous, we'll handle the main logic once we have the response
+    // Create a string containing some opening tags - we'll add list items as we iterate through the JSON
+    let htmlString = "<br>In Dungeons & Dragons, 5th Edition:<ul>";
 
     data.forEach((dragon) => {
       // Print this element of the JSON to the console in a pretty table
@@ -41,16 +41,22 @@ await fetch("./dragons.json")
         getColour(dragon) +
         " dragons are " +
         getAlignment(dragon) +
-        " in alignment.</li>";
+        " in alignment. They have a Strength score of " +
+        getStr(dragon) +
+        ", giving them a Strength modifier of " +
+        getModifier(getStr(dragon)) +
+        ".</li>";
 
       console.log(htmlString);
     });
 
-    // Append the closing list tag, and then set the document's contents to be our completed string
+    // Append the closing tags, and then set the document's contents to be our completed string
     htmlString += "</ul>";
     document.body.innerHTML = htmlString;
   })
   .catch((error) => {
-    // If there are any errors in the fetching, log them
+    // If there are any errors while fetching the JSON, log them
+    document.body.innerHTML =
+      "There was an error loading the data. Please consult the console log.";
     console.log(error);
   });
